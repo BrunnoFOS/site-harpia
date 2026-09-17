@@ -1,0 +1,2 @@
+src/imports/harpia-logo.png !text !filter !merge !diff
+*.png !text !filter !merge !diff
