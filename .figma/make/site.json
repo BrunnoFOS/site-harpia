@@ -1,0 +1,10 @@
+{
+  "description": "Delivers AI-powered marketing, support, and sales agents to streamline client engagement, qualify leads, and resolve issues for tech businesses.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
