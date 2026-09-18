@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react'
 import harpiaLogo from '@/imports/harpia-logo.png'
+import {
+  Megaphone,
+  Target,
+  Headphones,
+  Globe
+} from "lucide-react";
 
 const NAV_LINKS = [
   { label: 'Soluções', href: '#solucoes' },
@@ -29,7 +35,7 @@ function Nav() {
       }}>
         <nav style={{ maxWidth: 'var(--maxw)', margin: '0 auto', padding: '16px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <a href="#inicio" aria-label="HarpiaHub">
-            <img src={harpiaLogo} alt="HarpiaHub" style={{ height: 30, width: 'auto' }} />
+            <img src={harpiaLogo} alt="HarpiaHub" style={{ height: 70, width: 'auto' }} />
           </a>
           <div style={{ display: 'flex', alignItems: 'center', gap: 36 }} className="nav-desktop">
             {NAV_LINKS.map(l => (
@@ -105,9 +111,9 @@ function Hero() {
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 9, fontSize: 13, color: 'var(--text-2)', marginBottom: 24, fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '0.06em', textTransform: 'uppercase' }}>
               <span style={{ width: 5, height: 5, background: 'var(--accent)', borderRadius: '50%', flexShrink: 0, display: 'inline-block' }} />
-              Natal, RN — Tecnologia com precisão
+              Natal, RN - Tecnologia com precisão
             </div>
-            <h1 style={{ fontSize: 'clamp(34px, 4.4vw, 58px)', lineHeight: 1.06, fontWeight: 700, maxWidth: '13ch' }}>
+            <h1 style={{ fontSize: 'clamp(34px, 3.5vw, 58px)', lineHeight: 1.06, fontWeight: 700, maxWidth: '13ch' }}>
               Agentes de IA que trabalham para o seu <span style={{ color: 'var(--accent)' }}>negócio</span>
             </h1>
             <p style={{ marginTop: 22, fontSize: 17, color: 'var(--text-1)', maxWidth: '48ch', lineHeight: 1.65 }}>
@@ -145,10 +151,10 @@ function Hero() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1, border: '1px solid var(--border-soft)' }}>
             {[
-              { icon: '◆', label: 'Agente de Marketing', desc: 'Posts, stories e legenda gerados automaticamente com a voz da sua marca.' },
-              { icon: '◆', label: 'Agente SDR', desc: 'Só leads qualificados chegam ao seu time. Curiosos são filtrados antes.' },
-              { icon: '◆', label: 'Agente de Suporte', desc: 'Atendimento 24/7. Resolve o comum, escala o complexo.' },
-              { icon: '◆', label: 'Site + IA em combo', desc: 'Presença digital profissional integrada com atendimento automatizado.' },
+              { icon: <Megaphone size={16} />, label: 'Agente de Marketing', desc: 'Posts, stories e legenda gerados automaticamente com a voz da sua marca.' },
+              { icon: <Target size={16} />, label: 'Agente SDR', desc: 'Só leads qualificados chegam ao seu time. Curiosos são filtrados antes.' },
+              { icon: <Headphones size={16} />, label: 'Agente de Suporte', desc: 'Atendimento 24/7. Resolve o comum, escala o complexo.' },
+              { icon: <Globe size={16} />, label: 'Site + SEO ', desc: 'Seu site com otimização para motores de busca. Sua marca no topo.' },
             ].map((item, i) => (
               <div key={i} style={{
                 padding: '20px 24px', background: 'var(--bg-1)',
@@ -190,7 +196,7 @@ function AgentsSection() {
       id: 'marketing',
       tag: 'Agente 01',
       title: 'Marketing',
-      headline: 'Conteúdo criado, postado e agendado — sem você precisar pensar nisso',
+      headline: 'Conteúdo criado, postado e agendado, sem você precisar pensar nisso',
       description: 'O agente de marketing cria posts, legendas e stories com a identidade da sua marca. Você aprova e ele agenda. Presença nas redes sem precisar parar o dia para isso.',
       features: [
         'Geração de posts e legendas para redes sociais',
@@ -205,7 +211,7 @@ function AgentsSection() {
       id: 'sdr',
       tag: 'Agente 02',
       title: 'SDR',
-      headline: 'Só chegam leads prontos para fechar — curiosos ficam pelo caminho',
+      headline: 'Só chegam leads prontos para fechar, curiosos ficam pelo caminho',
       description: 'O agente SDR conversa com cada contato que entra, faz as perguntas certas e qualifica com base no fit real com o seu produto. O seu time de vendas recebe apenas quem já está no momento de compra.',
       features: [
         'Qualificação automática de todos os leads',
@@ -242,7 +248,7 @@ function AgentsSection() {
           </div>
           <h2 style={{ fontSize: 'clamp(26px, 3vw, 38px)', lineHeight: 1.12 }}>Três agentes. Três áreas críticas do negócio.</h2>
           <p style={{ color: 'var(--text-1)', marginTop: 14, fontSize: 16, lineHeight: 1.65 }}>
-            Cada agente é treinado para uma função específica e opera com autonomia real — não apenas responde perguntas, resolve problemas.
+            Cada agente é treinado para uma função específica e opera com autonomia real, não apenas responde perguntas, resolve problemas.
           </p>
         </div>
 
@@ -314,7 +320,7 @@ function SitesSection() {
               Site profissional em combo com o agente de IA
             </h2>
             <p style={{ color: 'var(--text-1)', marginTop: 16, fontSize: 15.5, lineHeight: 1.7, maxWidth: '44ch' }}>
-              Desenvolvemos sites modernos, responsivos e otimizados para conversão — e integramos diretamente com a plataforma de atendimento via IA. Uma contratação, dois problemas resolvidos.
+              Desenvolvemos sites modernos, responsivos e otimizados para conversão. Além disso, integramos diretamente com a plataforma de atendimento via IA. Uma contratação, dois problemas resolvidos.
             </p>
             <ul style={{ marginTop: 30, display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
@@ -375,9 +381,9 @@ function SitesSection() {
 
 function HowItWorks() {
   const steps = [
-    { num: '01', title: 'Diagnóstico', desc: 'Conversamos sobre o seu negócio para entender onde a IA vai gerar mais resultado — marketing, vendas ou suporte.' },
+    { num: '01', title: 'Diagnóstico', desc: 'Conversamos sobre o seu negócio para entender onde a IA vai gerar mais resultado: marketing, vendas ou suporte.' },
     { num: '02', title: 'Configuração', desc: 'Treinamos o agente com as informações da sua empresa: produto, tom de voz, perguntas frequentes e processo de vendas.' },
-    { num: '03', title: 'Ativação', desc: 'O agente entra em produção integrado aos seus canais — WhatsApp, site ou redes sociais.' },
+    { num: '03', title: 'Ativação', desc: 'O agente entra em produção integrado aos seus canais, WhatsApp, site ou redes sociais.' },
     { num: '04', title: 'Operação contínua', desc: 'Monitoramos, ajustamos e evoluímos o agente com base nos dados reais das interações.' },
   ]
   return (
@@ -407,7 +413,7 @@ function HowItWorks() {
           <div style={{ background: 'var(--bg-0)', padding: '40px 44px' }}>
             <h3 style={{ fontSize: 22, marginBottom: 16 }}>Sobre a HarpiaHub</h3>
             <p style={{ color: 'var(--text-1)', fontSize: 15.5, lineHeight: 1.7 }}>
-              Somos uma empresa de tecnologia de Natal, RN. Pequena por tamanho, precisa por escolha. Trabalhamos com negócios que precisam de soluções reais — não de promessas.
+              Somos uma empresa de tecnologia de Natal, RN. Pequena por tamanho, precisa por escolha. Trabalhamos com negócios que precisam de soluções reais, sem promessas vazias.
             </p>
             <p style={{ color: 'var(--text-1)', fontSize: 15.5, lineHeight: 1.7, marginTop: 14 }}>
               Nossa especialidade é construir agentes de IA que funcionam de verdade: com contexto, com treinamento específico para o negócio e com resultado mensurável.
@@ -417,7 +423,7 @@ function HowItWorks() {
             <h3 style={{ fontSize: 16, color: 'var(--accent)', marginBottom: 20 }}>Por que a HarpiaHub?</h3>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                'Agentes treinados para o seu contexto específico — não soluções genéricas',
+                'Agentes treinados para o seu contexto específico, não soluções genéricas',
                 'Proximidade real: você fala direto com quem constrói',
                 'Entrega sem enrolação e com documentação clara',
                 'Suporte ativo após o lançamento',
@@ -588,7 +594,7 @@ function Footer() {
           <div>
             <img src={harpiaLogo} alt="HarpiaHub" style={{ height: 28, width: 'auto' }} />
             <p style={{ color: 'var(--text-2)', fontSize: 14, marginTop: 16, lineHeight: 1.6, maxWidth: '28ch' }}>
-              Tecnologia com a precisão de quem enxerga longe. Agentes de IA, sites e automações.
+              Tecnologia com a precisão de quem enxerga longe. Agentes de IA, sites e automações personalizadas.
             </p>
           </div>
           {[
