@@ -19,8 +19,3 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
-.claude/
-.agents/
-.mcp.json
-skills-lock.json
-nul
