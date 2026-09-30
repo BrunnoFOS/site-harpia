@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import harpiaLogo from '@/imports/harpia-logo.png'
+import brandImage from '@/imports/image.png'
+import brandPhoto from '@/imports/WhatsApp_Image_2026-09-16_at_10.42.26.jpeg'
 import {
   Megaphone,
   Target,
@@ -151,25 +153,30 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 1, border: '1px solid var(--border-soft)' }}>
-            {[
-              { icon: <Megaphone size={16} />, label: 'Agente de Marketing', desc: 'Posts, stories e legenda gerados automaticamente com a voz da sua marca.' },
-              { icon: <Target size={16} />, label: 'Agente SDR', desc: 'Só leads qualificados chegam ao seu time. Curiosos são filtrados antes.' },
-              { icon: <Headphones size={16} />, label: 'Agente de Suporte', desc: 'Atendimento 24/7. Resolve o comum, escala o complexo.' },
-              { icon: <Globe size={16} />, label: 'Site + SEO ', desc: 'Seu site com otimização para motores de busca. Sua marca no topo.' },
-            ].map((item, i) => (
-              <div key={i} style={{
-                padding: '20px 24px', background: 'var(--bg-1)',
-                borderBottom: i < 3 ? '1px solid var(--border-soft)' : 'none',
-                display: 'flex', alignItems: 'flex-start', gap: 14,
-              }}>
-                <span style={{ color: 'var(--accent)', fontSize: 9, marginTop: 6, flexShrink: 0 }}>{item.icon}</span>
-                <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 14, marginBottom: 3 }}>{item.label}</div>
-                  <div style={{ fontSize: 13.5, color: 'var(--text-1)', lineHeight: 1.5 }}>{item.desc}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <div style={{ border: '1px solid var(--border-soft)', overflow: 'hidden' }}>
+              <img src={brandPhoto} alt="HarpiaHub — Identidade Visual" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 1, border: '1px solid var(--border-soft)' }}>
+              {[
+                { icon: <Megaphone size={16} />, label: 'Agente de Marketing', desc: 'Posts, stories e legenda gerados automaticamente com a voz da sua marca.' },
+                { icon: <Target size={16} />, label: 'Agente SDR', desc: 'Só leads qualificados chegam ao seu time. Curiosos são filtrados antes.' },
+                { icon: <Headphones size={16} />, label: 'Agente de Suporte', desc: 'Atendimento 24/7. Resolve o comum, escala o complexo.' },
+                { icon: <Globe size={16} />, label: 'Site + SEO ', desc: 'Seu site com otimização para motores de busca. Sua marca no topo.' },
+              ].map((item, i) => (
+                <div key={i} style={{
+                  padding: '20px 24px', background: 'var(--bg-1)',
+                  borderBottom: i < 3 ? '1px solid var(--border-soft)' : 'none',
+                  display: 'flex', alignItems: 'flex-start', gap: 14,
+                }}>
+                  <span style={{ color: 'var(--accent)', fontSize: 9, marginTop: 6, flexShrink: 0 }}>{item.icon}</span>
+                  <div>
+                    <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 14, marginBottom: 3 }}>{item.label}</div>
+                    <div style={{ fontSize: 13.5, color: 'var(--text-1)', lineHeight: 1.5 }}>{item.desc}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
@@ -412,12 +419,15 @@ function HowItWorks() {
         </div>
 
         <div style={{ marginTop: 64, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--border-soft)', border: '1px solid var(--border-soft)' }}>
-          <div style={{ background: 'var(--bg-0)', padding: '40px 44px' }}>
-            <h3 style={{ fontSize: 22, marginBottom: 16 }}>Sobre a HarpiaHub</h3>
+          <div style={{ background: 'var(--bg-0)', padding: '40px 44px', display: 'flex', flexDirection: 'column', gap: 24 }}>
+            <h3 style={{ fontSize: 22, marginBottom: 0 }}>Sobre a HarpiaHub</h3>
+            <div style={{ border: '1px solid var(--border-soft)', overflow: 'hidden' }}>
+              <img src={brandImage} alt="HarpiaHub — Brand Guidelines" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
             <p style={{ color: 'var(--text-1)', fontSize: 15.5, lineHeight: 1.7 }}>
               Somos uma empresa de tecnologia de Natal, RN. Pequena por tamanho, precisa por escolha. Trabalhamos com negócios que precisam de soluções reais, sem promessas vazias.
             </p>
-            <p style={{ color: 'var(--text-1)', fontSize: 15.5, lineHeight: 1.7, marginTop: 14 }}>
+            <p style={{ color: 'var(--text-1)', fontSize: 15.5, lineHeight: 1.7 }}>
               Nossa especialidade é construir agentes de IA que funcionam de verdade: com contexto, com treinamento específico para o negócio e com resultado mensurável.
             </p>
           </div>
