@@ -583,6 +583,25 @@ p { margin: 0; }
   background: linear-gradient(90deg, rgba(255,77,0,0.03) 0%, transparent 40%) !important;
 }
 
+/* Accordion header layout */
+.agent-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.agent-tag {
+  font-size: 12px;
+  color: var(--accent);
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-width: 100px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
 /* ═══════════════════════════════════════════
    STAT BLOCK HOVER
    ═══════════════════════════════════════════ */
@@ -832,6 +851,21 @@ p { margin: 0; }
   }
   .form-name-email-grid {
     grid-template-columns: 1fr !important;
+  }
+  .agent-header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .agent-tag {
+    min-width: unset;
+  }
+  .agent-btn {
+    padding: 20px 20px !important;
+  }
+  .agent-content {
+    padding: 0 20px 28px !important;
+    gap: 28px !important;
   }
 }
 

@@ -619,20 +619,21 @@ function AgentRow({ agent, open, onToggle }: { agent: AgentData; open: boolean; 
     <div className={open ? 'accordion-row-active' : ''} style={{ background: 'var(--bg-0)', transition: 'border-color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo)' }}>
       <button
         id={headerId}
+        className="agent-btn"
         onClick={onToggle}
         aria-expanded={open}
         aria-controls={contentId}
         style={{
           width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '28px 32px', background: 'none', border: 'none',
-          cursor: 'pointer', textAlign: 'left', gap: 20,
+          cursor: 'pointer', textAlign: 'left', gap: 16,
           transition: 'background 0.2s var(--ease-out-expo)',
         }}
         onMouseEnter={e => (e.currentTarget.style.background = 'var(--surface)')}
         onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-          <span style={{ fontSize: 12, color: 'var(--accent)', fontFamily: "'Syne', sans-serif", letterSpacing: '0.08em', textTransform: 'uppercase', minWidth: 100, fontWeight: 600 }}>{agent.tag}</span>
-          <h3 style={{ fontSize: 'clamp(18px, 2vw, 22px)', color: 'var(--text-0)' }}>{agent.headline}</h3>
+        <div className="agent-header-left">
+          <span className="agent-tag">{agent.tag}</span>
+          <h3 style={{ fontSize: 'clamp(16px, 2vw, 22px)', color: 'var(--text-0)' }}>{agent.headline}</h3>
         </div>
         <svg width="18" height="18" fill="none" stroke="var(--accent)" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"
           style={{ flexShrink: 0, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform .3s var(--ease-out-expo)' }}>
