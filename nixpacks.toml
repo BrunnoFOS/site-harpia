@@ -1,0 +1,2 @@
+[start]
+cmd = "cp -r /app/dist/* /app/ && exec caddy run --config /assets/Caddyfile --adapter caddyfile 2>&1"
